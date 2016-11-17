@@ -1,6 +1,6 @@
-FROM node
+FROM gerencio/alpine-env:node-6.9.1
 MAINTAINER Keyvan Fatehi <keyvanfatehi@gmail.com>
-RUN adduser --disabled-password --gecos "" sinopia
+RUN adduser -D -g "" sinopia
 RUN mkdir -p /opt/sinopia/storage
 WORKDIR /opt/sinopia
 RUN npm install js-yaml sinopia
