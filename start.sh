@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ ! -f config.yaml ]; then
+if [ ! -f config/config.yaml ]; then
   cp /tmp/config.yaml /opt/sinopia/config/config.yaml
 fi
 cat /opt/sinopia/config.yaml
