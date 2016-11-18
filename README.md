@@ -4,11 +4,11 @@ Sinopia is a private npm repository server
 
 ### Installing Image
 
-`docker pull keyvanfatehi/sinopia:latest`
+`docker pull gerencio/npm-server:latest`
 
 ### Creating Container
 
-`docker run --name sinopia -d -p 4873:4873 keyvanfatehi/sinopia:latest`
+`docker run --name sinopia -d -p 4873:4873 gerencio/npm-server:latest`
 
 ### Setting Registry
 
@@ -38,7 +38,7 @@ docker start sinopia
 # Save the config file
 curl -L https://raw.githubusercontent.com/rlidwka/sinopia/master/conf/default.yaml -o /path/to/config.yaml
 # Mount the config file to the exposed data volume
-docker run -v /path/to/config.yaml:/opt/sinopia/config.yaml --name sinopia -d -p 4873:4873 keyvanfatehi/sinopia:latest
+docker run -v /path/to/config.yaml:/opt/sinopia/config.yaml --name sinopia -d -p 4873:4873 gerencio/npm-server:latest
 ```
 
 Restart the container anytime you change the config.
@@ -56,7 +56,7 @@ Alternatively, host path for /opt/sinopia can be determined by running:
 ```
 docker stop sinopia
 docker rm sinopia
-docker run --name sinopia -d -p 4873:4873 keyvanfatehi/sinopia:latest
+docker run --name sinopia -d -p 4873:4873 gerencio/npm-server:latest
 docker stop sinopia
 docker run --volumes-from sinopia -v $(pwd):/backup ubuntu tar xvf /backup/backup.tar
 docker start sinopia
