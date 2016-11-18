@@ -49,3 +49,14 @@ logs:
 
 listen:
   - 0.0.0.0:4873
+
+
+middlewares:
+  github-oauth:
+    client-id: github-app-id # required
+    client-secret: github-app-secret # required
+
+auth:
+  github-oauth:
+    org: soundtrackyourbrand # required, people within this org will be able to auth
+    cache-ttl-ms: 60000 # default to 30s if not present
