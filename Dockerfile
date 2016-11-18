@@ -10,7 +10,7 @@ RUN apk add --update \
   && pip install virtualenv \
   && rm -rf /var/cache/apk/*
 
-RUN npm -g  install js-yaml sinopia sinopia-github-oauth
+RUN npm -g  install js-yaml sinopia2 sinopia-github-oauth
 RUN mkdir config
 ADD config.yaml /tmp/config.yaml
 ADD start.sh /opt/sinopia/start.sh
